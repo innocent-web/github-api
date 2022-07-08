@@ -13,6 +13,7 @@
   },
   "author": "Appstud",
   "dependencies": {
+    "@fastify/jwt": "^6.2.1",
     "axios": "^0.20.0",
     "fastify": "^3.2.1",
     "sequelize": "^6.21.2",

@@ -21,7 +21,7 @@ export default class UserController {
 	{
 		
 		try {
-			await User.create({ id:1,username: "Jane", password: "pass", token:"454f78f45" });
+			//await User.create({ id:1,username: "Jane", password: "pass", token:"454f78f45" });
       res
 			.send({
 				'user'  : 'myuseranme',
@@ -29,6 +29,7 @@ export default class UserController {
 			})
 		} catch (error) {
 			res.send({msg:'failled', status:500, route:'/api/users/register'});
+      
 		}
     
 		
