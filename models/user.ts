@@ -1,8 +1,5 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
-const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: './database.sqlite'
-});
+import db from "../config/db.config"
 
 export class User extends Model {}
 User.init({
@@ -29,11 +26,11 @@ User.init({
   }
 }, {
   // Other model options go here
-  sequelize, // We need to pass the connection instance
+  sequelize:db, // We need to pass the connection instance
   modelName: 'User' // We need to choose the model name
 });
 try {
-  sequelize.authenticate();
+  db.authenticate();
   console.log('Connection has been established successfully.');
 } catch (error) {
   console.error('Unable to connect to the database:', error);
