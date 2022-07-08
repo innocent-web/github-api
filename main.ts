@@ -1,5 +1,6 @@
 import HttpGateway from "./HttpGateway";
 import ExampleController from "./controllers/ExampleController";
+import UserController from "./controllers/UserController";
 
 (async function main() {
     // Init Fastify router
@@ -7,6 +8,7 @@ import ExampleController from "./controllers/ExampleController";
 
     // Controllers
     new ExampleController(http.router)
+    new UserController(http.router)
 
     // Fastify router start
     await http.start()
